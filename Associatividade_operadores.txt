@@ -1,0 +1,44 @@
+
+
+🔧 O que é associatividade?
+Quando dois operadores têm a mesma precedência, a associatividade define se a avaliação acontece da esquerda para a direita ou da direita para a esquerda.
+
+👈 Associatividade à esquerda (Left-to-right)
+A maioria dos operadores em PHP tem associatividade à esquerda. Isso significa que a expressão é avaliada da esquerda para a direita.
+
+Exemplo:
+
+php
+Copiar
+Editar
+echo 10 - 5 - 2;  // (10 - 5) - 2 = 3
+👉 Associatividade à direita (Right-to-left)
+Alguns operadores, como atribuição (=) e operadores de atribuição combinada (+=, -=, etc.), têm associatividade à direita.
+
+Exemplo:
+
+php
+Copiar
+Editar
+$a = $b = $c = 5;
+// Interpretação: $a = ($b = ($c = 5));
+🔢 Tabela resumida (parcial)
+Operador	Associatividade
+= += -= etc.	Direita para esquerda
++ - * / %	Esquerda para direita
+. (concatenação)	Esquerda para direita
+== != === !==	Esquerda para direita
+and or xor	Esquerda para direita
+?: (ternário)	Direita para esquerda
+
+🧠 Exemplo com concatenação (.):
+php
+Copiar
+Editar
+echo "A" . "B" . "C"; // (( "A" . "B" ) . "C") => "ABC"
+⚠️ Dica importante:
+A associatividade só entra em ação quando há mais de um operador da mesma precedência na expressão. Se os operadores tiverem precedências diferentes, a precedência vem primeiro, depois a associatividade.
+
+
+
+
